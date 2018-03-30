@@ -20,7 +20,7 @@ class Json_code(threading.Thread):
         #黑名单
         self.blacklist = ["x.x.x.x"]
         cp = ConfigParser.SafeConfigParser()
-        cp.read('cdn_port.conf')
+        cp.read('conf/cdn_port.conf')
         self.port_list = [int(x) for x in cp.get(argv, "port").split(",")]
         try:
             #白名单
